@@ -1,15 +1,36 @@
-import { Text, View } from "react-native";
+import { View, StyleSheet, Image } from "react-native";
+
+const styles = StyleSheet.create({
+  container: {
+    flex: 1,
+      justifyContent: "center",
+      alignItems: "center",
+      backgroundColor: '#021123',
+      gap: 40,
+  },
+  actions: {
+    paddingVertical: 24,
+    paddingHorizontal: 24,
+    backgroundColor: '#14448080',
+    width: '80%',
+    borderRadius: 32,
+    borderWidth: 2,
+    borderColor: '#144480',
+
+  }
+
+})
 
 export default function Index() {
   return (
-    <View
-      style={{
-        flex: 1,
-        justifyContent: "center",
-        alignItems: "center",
-      }}
-    >
-      <Text>Edit app/index.jsx to edit this screen.</Text>
+    <View style={styles.container}>
+      
+      <Image source={require('./pomodoro.png')}></Image>
+      <View style={styles.actions}>
+
+      </View>
+      
     </View>
   );
 }
+
