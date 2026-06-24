@@ -1,17 +1,50 @@
-import { View, StyleSheet, Image, Text, Pressable } from "react-native";
+import { useState } from "react";
+import { View, Image, Text, StyleSheet } from "react-native";
+import { FokusButton } from "../components/FokusButton";
+import { ActionButton } from "../components/ActionButton";
+import { Timer } from "../components/Timer";
 
-
+const pomodoro = [
+  {
+    id: 'focus',
+    initialValue: 25,
+    image: require('./pomodoro.png'),
+    display: 'Foco'
+  },
+  {
+    id: 'short',
+    initialValue: 5,
+    image: require('./short.png'),
+    display: 'Pausa Curta'
+  },
+  {
+    id: 'long',
+    initialValue: 15,
+    image: require('./long.png'),
+    display: 'Pausa Longa'
+  }
+]
 
 export default function Index() {
+
+  const [timerType, setTimerType] = useState(pomodoro[0])
+
   return (
     <View style={styles.container}>
-      
-      <Image source={require('./pomodoro.png')}></Image>
+      <Image source={timerType.image}></Image>
       <View style={styles.actions}>
-        <Text style={styles.timer}>25:00</Text>
-        <Pressable style={styles.button}>
-          <Text style={styles.buttonText}>Começar</Text>
-        </Pressable>
+        <View style={styles.context}>
+          {pomodoro.map(p => (
+            <ActionButton 
+              key={p.id} 
+              active={timerType.id === p.id} 
+              onPress={() => setTimerType(p)} 
+              display={p.display} 
+            />
+          ))}
+        </View>
+        <Timer totalSeconds={timerType.initialValue} />
+        <FokusButton/>
       </View>
       <View style={styles.footer}>
         <Text style={styles.footerText}>
@@ -41,23 +74,10 @@ const styles = StyleSheet.create({
     gap: 32
 
   },
-  timer: {
-    fontSize: 54,
-    color: '#fff',
-    fontWeight: 'bold',
-    textAlign: 'center'
-  },
-  button: {
-    backgroundColor: '#B872FF',
-    borderRadius: 10,
-    padding: 32
-
-  },
-  buttonText: {
-    textAlign: 'center',
-    color: '#021123',
-    fontSize: 18,
-    fontWeight: 'bold'
+  context: {
+    flexDirection: 'row',
+    justifyContent: 'space-around',
+    alignItems: 'center'
   },
   footer: {
     width: '80%'
@@ -67,5 +87,4 @@ const styles = StyleSheet.create({
     color: '#98A0A8',
     fontSize: 12.5
   }
-
 })
