@@ -1,53 +1,54 @@
-# Welcome to your Expo app 👋
+# 🍅 Fokus Timer
 
-This is an [Expo](https://expo.dev) project created with [`create-expo-app`](https://www.npmjs.com/package/create-expo-app).
+Um aplicativo de Pomodoro desenvolvido com React Native e Expo durante os estudos da formação da Alura.
 
-## Get started
+O objetivo da aplicação é auxiliar na organização das sessões de estudo e trabalho utilizando a técnica Pomodoro, alternando períodos de foco e descanso.
 
-1. Install dependencies
+## ✨ Funcionalidades
 
-   ```bash
-   npm install
-   ```
+* ▶️ Iniciar a contagem regressiva
+* ⏸️ Pausar o cronômetro a qualquer momento
+* 🍅 Modo **Foco** com 25 minutos
+* ☕ Modo **Pausa Curta** com 5 minutos
+* 🌴 Modo **Pausa Longa** com 15 minutos
+* 🔄 Troca entre os modos com reinicialização automática do contador
 
-2. Start the app
+## 🛠️ Tecnologias utilizadas
 
-   ```bash
-   npx expo start
-   ```
+* React Native
+* Expo
+* JavaScript
+* React Hooks (`useState` e `useRef`)
+* React Native SVG
 
-In the output, you'll find options to open the app in a
+## 🚀 Como executar o projeto
 
-- [development build](https://docs.expo.dev/develop/development-builds/introduction/)
-- [Android emulator](https://docs.expo.dev/workflow/android-studio-emulator/)
-- [iOS simulator](https://docs.expo.dev/workflow/ios-simulator/)
-- [Expo Go](https://expo.dev/go), a limited sandbox for trying out app development with Expo
-
-You can start developing by editing the files inside the **app** directory. This project uses [file-based routing](https://docs.expo.dev/router/introduction).
-
-## Get a fresh project
-
-When you're ready, run:
+### Instale as dependências
 
 ```bash
-npm run reset-project
+npm install
 ```
 
-This command will move the starter code to the **app-example** directory and create a blank **app** directory where you can start developing.
+### Inicie a aplicação
 
-## Learn more
+```bash
+npx expo start
+```
 
-To learn more about developing your project with Expo, look at the following resources:
+Após iniciar, escolha uma das opções disponíveis no terminal:
 
-- [Expo documentation](https://docs.expo.dev/): Learn fundamentals, or go into advanced topics with our [guides](https://docs.expo.dev/guides).
-- [Learn Expo tutorial](https://docs.expo.dev/tutorial/introduction/): Follow a step-by-step tutorial where you'll create a project that runs on Android, iOS, and the web.
+* Android Emulator
+* iOS Simulator
+* Expo Go
 
-## Join the community
+## 📱 Interface
 
-Join our community of developers creating universal apps.
+A aplicação possui uma interface simples e objetiva, permitindo alternar rapidamente entre os modos de foco e descanso e controlar o cronômetro através dos botões de iniciar e pausar.
 
-- [Expo on GitHub](https://github.com/expo/expo): View our open source platform and contribute.
-- [Discord community](https://chat.expo.dev): Chat with Expo users and ask questions.
+## 📚 Projeto desenvolvido para fins educacionais
+
+Projeto desenvolvido durante os estudos em React Native na plataforma Alura.
+
 
 ## 🚧 Em desenvolvimento
 
