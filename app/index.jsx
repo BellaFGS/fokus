@@ -1,4 +1,4 @@
-import { Link } from "expo-router";
+import { Link, router } from "expo-router";
 import { Image, Text, View, StyleSheet } from "react-native";
 import { FokusButton } from "../components/FokusButton";
 import { ViewFooter } from "../components/Footer/";
@@ -6,8 +6,8 @@ import { ViewFooter } from "../components/Footer/";
 export default function Index () {
   return (
     <View style={styles.container}>
-      <Image source={require('../assets/images/logo.png')} />
-      <View>
+      <Image  source={require('../assets/images/logo.png')} />
+      <View style={styles.inner}>
         <Text style={styles.title}>
           Otimize sua {'\n'}produtividade,{'\n'} 
           <Text style={styles.bold}>
@@ -15,7 +15,10 @@ export default function Index () {
           </Text>
         </Text>
         <Image source={require('../assets/images/home.png')} />
-        <FokusButton title="Quero iniciar!" />
+        <FokusButton 
+          title="Quero iniciar!"
+          onPress={() => router.navigate('/pomodoro')} 
+        />
       </View>
       <ViewFooter/>
     </View>
@@ -28,7 +31,13 @@ const styles = StyleSheet.create({
       justifyContent: "center",
       alignItems: "center",
       backgroundColor: '#021123',
-      gap: 40,
+      gap: 40
+  },
+  inner: {
+    gap: 16
+  },
+  image: {
+    width: '20%'
   },
   title: {
     color: '#fff',

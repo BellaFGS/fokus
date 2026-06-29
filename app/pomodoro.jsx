@@ -60,10 +60,10 @@ export default function Pomodoro() {
 const styles = StyleSheet.create({
   container: {
     flex: 1,
-      justifyContent: "center",
-      alignItems: "center",
-      backgroundColor: '#021123',
-      gap: 40,
+    justifyContent: "center",
+    alignItems: "center",
+    backgroundColor: '#021123',
+    gap: 40,
   },
   actions: {
     paddingVertical: 24,
